@@ -1,0 +1,61 @@
+package mall;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+public class Shopper {
+	public int ShopperID;
+	String ShopperName;
+	String ShopperType;
+	int ShopperNo;
+	
+	
+	ArrayList<Iteam> bookedIteamList=new ArrayList<Iteam>();
+	
+	public void addBookedIteam(Iteam obj){
+		obj.setIteamStatus("unavailable");
+		bookedIteamList.add(obj);
+	}
+	public int getShopperID() {
+		return shopperID;
+	}
+	public void setShopperID(int shopperID) {
+		this.ShopperID = shopperID;
+	}
+	public String getShopperName() {
+		return shopperName;
+	}
+	public void setShopperName(String shopperName) {
+		this.ShopperName = shopperName;
+	}
+	public int getShopperNo() {
+		return shopperNo;
+	}
+	public void setShopperNo(int shopperNo) {
+		this.ShopperNo = shopperNo;
+		
+	}
+	public String getShoppertype() {
+		return shopperType;
+	}
+	public void setShoppertype(String shoppertype) {
+		this.ShopperType = shoppertype;
+	}
+	public Shopper(int shopperID, String shopperName, int shopperNo,String shoppertype) {
+		super();
+		this.ShopperID = shopperID;
+		this.ShopperName = shopperName;
+		this.ShopperNo = shopperNo;
+		this.ShopperType = shoppertype;
+	}
+	public Shopper(int shopId, String name, int contactNo) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+
+
+}
+
