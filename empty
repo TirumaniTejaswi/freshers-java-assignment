@@ -1,0 +1,11 @@
+package mall;
+import java.util.Collection;
+
+public interface Shopselect {
+	boolean addIteam(Iteam i);
+	boolean removeIteam(String iid) throws IteamtNotFoundException;
+	Collection<Iteam> getCartDetails();
+	Iteam getIteamFromCart(String iid) throws IteamNotFoundException;
+	int IteamCount();
+  double getCartPrice();
+}
