@@ -1,0 +1,93 @@
+package mall;
+
+
+
+public class Iteam implements java.io.Serializable {
+	
+	public String iid;
+	public String iname;
+	private int iquantity;
+	public double iprice;
+	public String istatus;
+	public int idiscount;
+
+	public Iteam(){}
+	public Iteam(String iid, String iname,int iqunatity,double iprice,String istatus,int idiscount) 
+	{
+		this.iid = iid;
+		this.iname = iname;
+		this.iquantity = iqunatity;
+		this.iprice = iprice;
+		this.istatus =istatus;
+		this.idiscount =idiscount;
+	}
+	
+	public void setIid(String iid) {
+		this.iid = iid; 
+	}
+
+	public void setIname(String iname) {
+		this.iname = iname; 
+	}
+
+	private void setIqunatity(int iqunatity) {
+		this.iqunatity= iqunatity; 
+	}
+
+	public void setIPrice(double iprice) {
+		this.iprice = iprice; 
+	}
+
+	public String getIid() {
+		return (this.iid); 
+	}
+
+	public String getIname() {
+		return (this.iname); 
+	}
+
+	public int getIqunatity() {
+		return (this.getqunatity()); 
+	}
+
+	public double getIPrice() {
+		return (this.iprice); 
+	}
+
+	public String getIstatus() {
+		return istatus;
+	}
+	public void setIstatus(String istatus) {
+		this.istatus = istatus;
+	}
+	public int getIdiscount() {
+		return idiscount;
+	}
+	public void setIdiscount(int idiscount) {
+		this.idiscount = idiscount;
+	}
+	public String toString() {
+		String sep = System.getProperty("line.separator");
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(sep);
+		buffer.append("----- Iteam Detail ----- ");
+		buffer.append(sep);
+    buffer.append("\tpid = ");
+		buffer.append(iid);
+		buffer.append(sep);
+		buffer.append("\tiname = ");
+		buffer.append(iname);
+		buffer.append(sep);
+		buffer.append("\tiqunatity = ");
+		buffer.append(getqunatity());
+		buffer.append(sep);
+		buffer.append("\tiprice = ");
+		buffer.append(iprice);
+		buffer.append(sep);
+		buffer.append("\tistatus");
+		buffer.append(istatus);
+		buffer.append(sep);
+		return buffer.toString();
+	}
+
+}
