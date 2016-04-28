@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 public class Shopper {
-	public int ShopperID;
-	String ShopperName;
-	String ShopperType;
-	int ShopperNo;
+        private int ShopperID;
+	private String ShopperName;
+	private String ShopperType;
+	private int ShopperNo;
 	
 	
 	ArrayList<Iteam> bookedIteamList=new ArrayList<Iteam>();
@@ -43,7 +43,7 @@ public class Shopper {
 		this.ShopperType = shoppertype;
 	}
 	public Shopper(int shopperID, String shopperName, int shopperNo,String shoppertype) {
-		super();
+	
 		this.ShopperID = shopperID;
 		this.ShopperName = shopperName;
 		this.ShopperNo = shopperNo;
