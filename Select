@@ -1,0 +1,65 @@
+package mall;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Collection;
+ 
+public class Select implements Iselect {
+	
+	public String uid;
+	private Map<String, Iteam> map;
+	
+	public select(){}
+	public select(String uid){
+		this.uid=uid;
+		map = new HashMap<String, Iteam>();
+	}//select
+	
+	public boolean addIteam(Iteam I){
+		if(map.containsKey(i.getIid())){
+			Iteam i1 = map.get(i.getIid());
+			i1.setPrice(i1.getPrice()+i.getPrice());
+			i1.setqunatity(i1.getqunatity()+i.getqunatity());
+			return true;	
+		}
+		map.put(i.getiid(),i);
+		return false;
+	}//addIteam
+	
+	public boolean removeIteam(String iid) 
+    throws IteamNotFoundException {
+		if(map.containsKey(iid)){
+			map.remove(iid);
+			return true;
+		}else throw new IteamNotFoundException(
+      "Iteam with ID "+iid+" is not Found");
+	}
+	
+	public Collection<Iteam> getCartDetails(){
+		return map.values();
+	}
+	
+	public IIteam getIteamFromCart(String pid) 
+    throws IteamNotFoundException {
+		if(map.containsKey(iid)){
+			return map.get(iid);
+		}else {
+			throw new IteamNotFoundException(
+        "Iteam with ID "+iid+" is not Found.");
+		}
+	}
+	
+	public int iteamCount(){
+		return map.size();
+	}
+  
+  public double getCartPrice() {
+    double price = 0.0d;
+    Iterator<Iteam> iterator = getCartDetails().iterator();
+    while(iterator.hasNext()){
+      price+= iterator.next().getPrice();
+    }
+    return price;
+  }
+}
