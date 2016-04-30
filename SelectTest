@@ -1,0 +1,30 @@
+package mall;
+
+import java.util.Collection;
+import java.util.Iterator;
+
+
+public class SelectTest {
+
+	public static void main (String[] s) throws Exception {
+		
+		Select s = new Select("tejaswi");		
+		s.addIteam(new Iteam("i551","perfume",12,120,null, 0));
+		s.addIteam(new Iteam("i552","choclates",4,140, null, 0));
+		
+		System.out.println("\nNo. of Iteam : "+s.iteamCount());
+		System.out.println ("select Places By: "+s.uid);
+		
+   // code to remove iteam from Cart
+     o.removeIteam("i551");
+     //Get Iteam By its Id  
+     Iteam i = s.getIteamFromCart("i551");	
+    
+    System.out.println ("Cart Total : "+o.getCartPrice());   
+		final Iterator<Iteam> it = s.getCartDetails().iterator();
+		while(it.hasNext()){		
+			System.out.println (it.next());
+		}
+	}
+
+}
