@@ -1,0 +1,9 @@
+package mall;
+
+
+public class IteamNotFoundException extends Exception {
+	public IteamNotFoundException(){}
+	public IteamNotFoundException(String msg){
+		super(msg);
+	}
+}
